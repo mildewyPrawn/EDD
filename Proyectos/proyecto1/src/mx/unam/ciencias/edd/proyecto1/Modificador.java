@@ -13,30 +13,30 @@ public class Modificador{
      * @return la lista con las lineas de los archivos.
      */
     public Lista<String> leerArchivos(String[] args){
-	Lista<String> lista = new Lista<String>();
-	try{
-	    for(String files : args){
-		BufferedReader bfr = new BufferedReader(new InputStreamReader(new FileInputStream(files)));
-		String s;
-		while((s = bfr.readLine()) != null)
-		    lista.agrega(s);
-		bfr.close();
-	    }
-	} catch (IOException ioe){
-	    System.out.println("Error en la lectura de archivos.");
-	    System.exit(1);
-	}
-	return lista;
+        Lista<String> lista = new Lista<String>();
+        try{
+            for(String files : args){
+                BufferedReader bfr = new BufferedReader(new InputStreamReader(new FileInputStream(files)));
+                String s;
+                while((s = bfr.readLine()) != null)
+                    lista.agrega(s);
+                bfr.close();
+            }
+        } catch (IOException ioe){
+            System.out.println("Error en la lectura de archivos.");
+            System.exit(1);
+        }
+        return lista;
     }
 
     /**
      * Metodo que es el que organiza el funcionamiento del programa.
      * @param el arreglo de cadenas con las direcciones de los archivos.
-     */    
+     */
     public void ordenaArgs(String[] args){
-	Lista<String> listaOrd = new Lista<String>();
-	listaOrd = leerArchivos(args);
-	ordenaList(listaOrd);
+        Lista<String> listaOrd = new Lista<String>();
+        listaOrd = leerArchivos(args);
+        ordenaList(listaOrd);
     }
 
     /**
@@ -44,8 +44,8 @@ public class Modificador{
      * @param la lista a imprimir.
      */
     public void imprime(Lista<String> l){
-	for(String a : l)
-	    System.out.println(a);
+        for(String a : l)
+            System.out.println(a);
     }
 
     /**
@@ -53,7 +53,7 @@ public class Modificador{
      * @param la lista a ordenar.
      */
     public void ordenaList(Lista<String> l){
-	l = l.mergeSort((a,b) -> a.replaceAll("\\P{L}","").toLowerCase().compareTo(b.replaceAll("\\P{L}","")));
-	imprime(l);
+        l = l.mergeSort((a,b) -> a.replaceAll("\\P{L}","").toLowerCase().compareTo(b.replaceAll("\\P{L}","")));
+        imprime(l);
     }
 }
