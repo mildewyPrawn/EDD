@@ -33,8 +33,8 @@ public class ArbolRojinegro<T extends Comparable<T>>
          * @param elemento el elemento del vértice.
          */
         public VerticeRojinegro(T elemento) {
-	    super(elemento);
-	    this.color = Color.NINGUNO;
+            super(elemento);
+            this.color = Color.NINGUNO;
         }
 
         /**
@@ -42,7 +42,7 @@ public class ArbolRojinegro<T extends Comparable<T>>
          * @return una representación en cadena del vértice rojinegro.
          */
         public String toString() {
-	    return (color == Color.ROJO ? "R{":"N{") + elemento.toString() + "}";
+            return (color == Color.ROJO ? "R{":"N{") + elemento.toString() + "}";
         }
 
         /**
@@ -60,7 +60,7 @@ public class ArbolRojinegro<T extends Comparable<T>>
                 return false;
             @SuppressWarnings("unchecked")
                 VerticeRojinegro vertice = (VerticeRojinegro)o;
-	    return (color == vertice.color && super.equals(o));
+            return (color == vertice.color && super.equals(o));
         }
     }
 
@@ -69,7 +69,7 @@ public class ArbolRojinegro<T extends Comparable<T>>
      * de {@link ArbolBinarioOrdenado}.
      */
     public ArbolRojinegro() {
-	super();
+        super();
     }
 
     /**
@@ -79,7 +79,7 @@ public class ArbolRojinegro<T extends Comparable<T>>
      *        rojinegro.
      */
     public ArbolRojinegro(Coleccion<T> coleccion) {
-	super(coleccion);
+        super(coleccion);
     }
 
     /**
@@ -89,7 +89,7 @@ public class ArbolRojinegro<T extends Comparable<T>>
      * @return un nuevo vértice rojinegro con el elemento recibido dentro del mismo.
      */
     @Override protected Vertice nuevoVertice(T elemento) {
-	return new VerticeRojinegro(elemento);
+        return new VerticeRojinegro(elemento);
     }
 
     /**
@@ -100,7 +100,7 @@ public class ArbolRojinegro<T extends Comparable<T>>
      *         VerticeRojinegro}.
      */
     public Color getColor(VerticeArbolBinario<T> vertice) {
-	return ((VerticeRojinegro)vertice).color;
+        return ((VerticeRojinegro)vertice).color;
     }
 
     /**
@@ -110,36 +110,36 @@ public class ArbolRojinegro<T extends Comparable<T>>
      * @param elemento el elemento a agregar.
      */
     @Override public void agrega(T elemento) {
-	super.agrega(elemento);
-	VerticeRojinegro v = (VerticeRojinegro)ultimoAgregado;
-	v.color = Color.ROJO;
-	rebalanceaAgrega(v);
+        super.agrega(elemento);
+        VerticeRojinegro v = (VerticeRojinegro)ultimoAgregado;
+        v.color = Color.ROJO;
+        rebalanceaAgrega(v);
     }
 
     private VerticeRojinegro verticeRojinegro(VerticeArbolBinario<T> vertice){
-    	return (VerticeRojinegro)vertice;
+        return (VerticeRojinegro)vertice;
     }
-    
+
     private void rebalanceaAgrega(VerticeRojinegro v){
-	VerticeRojinegro padre;
-	//1
-	if(v.padre == null){
-	    v.color = Color.NEGRO;
-	    return;
-	}
-	//2
-	padre = verticeRojinegro(v.padre);
-	if(getColor(padre) == Color.NEGRO)
-	    return;
-	//3
-	VerticeRojinegro abuelo = verticeRojinegro(padre.padre);
-	VerticeRojinegro tio = null;
-	if(hijoIzquierdo(padre))
-	    tio = verticeRojinegro(abuelo.derecho);
-	else
-	    tio = verticeRojinegro(abuelo.izquierdo);
-	if(tio != null && tio.color == Color.ROJO){
-	    tio.color = Color.NEGRO;
+        VerticeRojinegro padre;
+        //1
+        if(v.padre == null){
+            v.color = Color.NEGRO;
+            return;
+        }
+        //2
+        padre = verticeRojinegro(v.padre);
+        if(getColor(padre) == Color.NEGRO)
+            return;
+        //3
+        VerticeRojinegro abuelo = verticeRojinegro(padre.padre);
+        VerticeRojinegro tio = null;
+        if(hijoIzquierdo(padre))
+            tio = verticeRojinegro(abuelo.derecho);
+        else
+            tio = verticeRojinegro(abuelo.izquierdo);
+        if(tio != null && tio.color == Color.ROJO){
+            tio.color = Color.NEGRO;
 	    padre.color = Color.NEGRO;
 	    abuelo.color = Color.ROJO;
 	    rebalanceaAgrega(abuelo);

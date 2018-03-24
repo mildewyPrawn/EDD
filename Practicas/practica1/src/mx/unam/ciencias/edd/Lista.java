@@ -48,24 +48,23 @@ public class Lista<T> implements Coleccion<T> {
 
         /* Nos da el elemento siguiente. */
         @Override public T next() {
-	    if(siguiente == null)
-		throw new NoSuchElementException("El elemento es null");
-	    
-	    anterior = siguiente;
-	    siguiente = siguiente.siguiente;
-	    return anterior.elemento;
+            if(siguiente == null)
+                throw new NoSuchElementException("El elemento es null");
+
+            anterior = siguiente;
+            siguiente = siguiente.siguiente;
+            return anterior.elemento;
         }
 
         /* Nos dice si hay un elemento anterior. */
         @Override public boolean hasPrevious() {
-	    return anterior != null;
+            return anterior != null;
         }
 
         /* Nos da el elemento anterior. */
         @Override public T previous() {
-	    if(anterior == null)
+            if(anterior == null)
 		throw new NoSuchElementException("El elemento es null");
-	    
 	    siguiente = anterior;
 	    anterior = anterior.anterior;
 	    return siguiente.elemento;

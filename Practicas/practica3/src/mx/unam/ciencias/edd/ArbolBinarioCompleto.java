@@ -18,33 +18,33 @@ public class ArbolBinarioCompleto<T> extends ArbolBinario<T> {
 
         /* Constructor que recibe la raíz del árbol. */
         public Iterador() {
-	    cola = new Cola<Vertice>();
-	    if(raiz != null)
-		cola.mete(raiz);
+            cola = new Cola<Vertice>();
+            if(raiz != null)
+                cola.mete(raiz);
         }
-	
+
         /* Nos dice si hay un elemento siguiente. */
         @Override public boolean hasNext() {
-	    return !cola.esVacia();
+            return !cola.esVacia();
         }
-	
+
         /* Regresa el siguiente elemento en orden BFS. */
         @Override public T next() {
-	    Vertice c = cola.saca();
-	    if(c.izquierdo != null)
-		cola.mete(c.izquierdo);
-	    if(c.derecho != null)
-		cola.mete(c.derecho);
-	    return c.elemento;
+            Vertice c = cola.saca();
+            if(c.izquierdo != null)
+                cola.mete(c.izquierdo);
+            if(c.derecho != null)
+                cola.mete(c.derecho);
+            return c.elemento;
         }
     }
-    
+
     /**
      * Constructor sin parámetros. Para no perder el constructor sin parámetros
      * de {@link ArbolBinario}.
      */
     public ArbolBinarioCompleto() { super(); }
-    
+
     /**
      * Construye un árbol binario completo a partir de una colección. El árbol
      * binario completo tiene los mismos elementos que la colección recibida.
