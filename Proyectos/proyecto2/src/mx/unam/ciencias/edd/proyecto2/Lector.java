@@ -11,20 +11,20 @@ public class Lector{
      * @param BufferedReader de la clase principal.
      */
     public void manejaLector(BufferedReader br){
-	String s = lecturaArchivo(br);
-	String[] parts = s.split(" ");
-	String data = elejidor(parts[0]);
-	int i = parts.length - 1;
-	/**Sino tenemos datos terminamos*/
-	if(i <= 0){
-	    System.out.println("No hay datos en la entrada");
-	    System.exit(1);
-	}
-	Lista<Integer> ai = new Lista<Integer>();
-	for(int j = 0; j < i; j++)
-	    ai.agrega(Integer.parseInt(parts[j+1]));
-	FactoryDS fds = new FactoryDS(data, ai);
-	fds.fabrica();
+        String s = lecturaArchivo(br);
+        String[] parts = s.split(" ");
+        String data = elejidor(parts[0]);
+        int i = parts.length - 1;
+        /**Sino tenemos datos terminamos*/
+        if(i <= 0){
+            System.out.println("No hay datos en la entrada");
+            System.exit(1);
+        }
+        Lista<Integer> ai = new Lista<Integer>();
+        for(int j = 0; j < i; j++)
+            ai.agrega(Integer.parseInt(parts[j+1]));
+        FactoryDS fds = new FactoryDS(data, ai);
+        fds.fabrica();
     }
 
     /**
@@ -34,42 +34,42 @@ public class Lector{
      *         programa termina.
      */
     private String elejidor(String ed){
-	String s = "";
-	switch(ed){
-	case "Lista":
-	    s = "Lista";
-	    break;
-	case "Pila":
-	    s = "Pila";
-	    break;
-	case "Cola":
-	    s = "Cola";
-	    break;
-	case "ArbolBinarioCompleto":
-	    s = "ArbolBinarioCompleto";
-	    break;
-	case "ArbolBinarioOrdenado":
-	    s = "ArbolBinarioOrdenado";
-	    break;
-	case "ArbolRojinegro":
-	    s = "ArbolRojinegro";
-	    break;
-	case "ArbolAVL":
-	    s = "ArbolAVL";
-	    break;
-	    //¿acento?
-	case "Grafica":
-	    s = "Grafica";
-	    break;
-	case "MonticuloMinimo":
-	    s = "MonticuloMinimo";
-	    break;
-	default:
-	    System.out.println("'" + ed + "'" + " No es una estructura válida.");
-	    System.exit(1);
-	    break;
-	}
-	return s;
+        String s = "";
+        switch(ed){
+        case "Lista":
+            s = "Lista";
+            break;
+        case "Pila":
+            s = "Pila";
+            break;
+        case "Cola":
+            s = "Cola";
+            break;
+        case "ArbolBinarioCompleto":
+            s = "ArbolBinarioCompleto";
+            break;
+        case "ArbolBinarioOrdenado":
+            s = "ArbolBinarioOrdenado";
+            break;
+        case "ArbolRojinegro":
+            s = "ArbolRojinegro";
+            break;
+        case "ArbolAVL":
+            s = "ArbolAVL";
+            break;
+            //¿acento?
+        case "Grafica":
+            s = "Grafica";
+            break;
+        case "MonticuloMinimo":
+            s = "MonticuloMinimo";
+            break;
+        default:
+            System.out.println("'" + ed + "'" + " No es una estructura válida.");
+            System.exit(1);
+            break;
+        }
+        return s;
     }
 
     /**
@@ -81,17 +81,17 @@ public class Lector{
      *         Reemplaza n espacios con uno solo.
      */
     private String lecturaArchivo(BufferedReader br){
-	String mensaje = "";
-	try{
-	    String cadena;
-	    while((cadena = br.readLine()) != null)
-		mensaje += buscador(cadena);
-	} catch(IOException ioe){
-	    System.out.println("Error en leer el archivo ");
-	    System.exit(1);
-	}
-	mensaje = mensaje.replaceAll(" +", " ");
-	return mensaje;
+        String mensaje = "";
+        try{
+            String cadena;
+            while((cadena = br.readLine()) != null)
+                mensaje += buscador(cadena);
+        } catch(IOException ioe){
+            System.out.println("Error en leer el archivo ");
+            System.exit(1);
+        }
+        mensaje = mensaje.replaceAll(" +", " ");
+        return mensaje;
     }
 
     /**
@@ -101,15 +101,14 @@ public class Lector{
      * @return cadena presentable.
      */
     private String buscador(String linea){
-	String l = linea.replaceAll("\t","");
-	String mensaje = "";
-	char c = '#';
-	for(int i = 0; i < l.length(); i++){
-	    if(l.charAt(i) == c)
-		return mensaje;
-	    mensaje += l.charAt(i);
-	}
-	return mensaje + " ";
+        String l = linea.replaceAll("\t","");
+        String mensaje = "";
+        char c = '#';
+        for(int i = 0; i < l.length(); i++){
+            if(l.charAt(i) == c)
+                return mensaje;
+            mensaje += l.charAt(i);
+        }
+        return mensaje + " ";
     }
 }
-
