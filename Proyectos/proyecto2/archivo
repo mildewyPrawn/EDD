@@ -4,10 +4,10 @@
 #Cola
 #ArbolBinarioCompleto
 #ArbolBinarioOrdenado
-ArbolRojinegro
+#ArbolRojinegro
 #ArbolAVL
 #MonticuloMinimo
-#Grafica
+Grafica
 
 	# Elementos :
 	1 2 3 4
@@ -18,4 +18,4 @@ ArbolRojinegro
 	# Los ultimos elementos
 	13 14 15
 16
-#17
+17

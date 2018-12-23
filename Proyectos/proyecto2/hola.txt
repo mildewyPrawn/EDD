@@ -1,0 +1,52 @@
+<?xml version = "1.0" encoding = "utf-8" ?>
+<svg width="1280" height="400">
+	<g>
+		<circle cx = "640" cy="20" r ="20" stroke="black" stroke-width="1" fill="black"/>
+		<text fill="white" font-family="sans-serif" text-anchor = "high" font-size="12" x="640" y="23">4</text>
+		<line x1="620" y1="20" x2="320" y2="50" stroke="black" stroke-width="3"/>
+ 		<circle cx = "320" cy="60" r ="20" stroke="black" stroke-width="1" fill="black"/>
+		<text fill="white" font-family="sans-serif" text-anchor = "high" font-size="12" x="320" y="63">2</text>
+		<line x1="300" y1="60" x2="160" y2="90" stroke="black" stroke-width="3"/>
+ 		<circle cx = "160" cy="100" r ="20" stroke="black" stroke-width="1" fill="black"/>
+		<text fill="white" font-family="sans-serif" text-anchor = "high" font-size="12" x="160" y="103">1</text>
+		<line x1="340" y1="60" x2="480" y2="90" stroke="black" stroke-width="3"/>
+ 		<circle cx = "480" cy="100" r ="20" stroke="black" stroke-width="1" fill="black"/>
+		<text fill="white" font-family="sans-serif" text-anchor = "high" font-size="12" x="480" y="103">3</text>
+		<line x1="660" y1="20" x2="960" y2="50" stroke="black" stroke-width="3"/>
+ 		<circle cx = "960" cy="60" r ="20" stroke="black" stroke-width="1" fill="red"/>
+		<text fill="white" font-family="sans-serif" text-anchor = "high" font-size="12" x="960" y="63">8</text>
+		<line x1="940" y1="60" x2="800" y2="90" stroke="black" stroke-width="3"/>
+ 		<circle cx = "800" cy="100" r ="20" stroke="black" stroke-width="1" fill="black"/>
+		<text fill="white" font-family="sans-serif" text-anchor = "high" font-size="12" x="800" y="103">6</text>
+		<line x1="780" y1="100" x2="720" y2="130" stroke="black" stroke-width="3"/>
+ 		<circle cx = "720" cy="140" r ="20" stroke="black" stroke-width="1" fill="black"/>
+		<text fill="white" font-family="sans-serif" text-anchor = "high" font-size="12" x="720" y="143">5</text>
+		<line x1="820" y1="100" x2="880" y2="130" stroke="black" stroke-width="3"/>
+ 		<circle cx = "880" cy="140" r ="20" stroke="black" stroke-width="1" fill="black"/>
+		<text fill="white" font-family="sans-serif" text-anchor = "high" font-size="12" x="880" y="143">7</text>
+		<line x1="980" y1="60" x2="1120" y2="90" stroke="black" stroke-width="3"/>
+ 		<circle cx = "1120" cy="100" r ="20" stroke="black" stroke-width="1" fill="black"/>
+		<text fill="white" font-family="sans-serif" text-anchor = "high" font-size="12" x="1120" y="103">12</text>
+		<line x1="1100" y1="100" x2="1040" y2="130" stroke="black" stroke-width="3"/>
+ 		<circle cx = "1040" cy="140" r ="20" stroke="black" stroke-width="1" fill="red"/>
+		<text fill="white" font-family="sans-serif" text-anchor = "high" font-size="12" x="1040" y="143">10</text>
+		<line x1="1020" y1="140" x2="1000" y2="170" stroke="black" stroke-width="3"/>
+ 		<circle cx = "1000" cy="180" r ="20" stroke="black" stroke-width="1" fill="black"/>
+		<text fill="white" font-family="sans-serif" text-anchor = "high" font-size="12" x="1000" y="183">9</text>
+		<line x1="1060" y1="140" x2="1080" y2="170" stroke="black" stroke-width="3"/>
+ 		<circle cx = "1080" cy="180" r ="20" stroke="black" stroke-width="1" fill="black"/>
+		<text fill="white" font-family="sans-serif" text-anchor = "high" font-size="12" x="1080" y="183">11</text>
+		<line x1="1140" y1="100" x2="1200" y2="130" stroke="black" stroke-width="3"/>
+ 		<circle cx = "1200" cy="140" r ="20" stroke="black" stroke-width="1" fill="red"/>
+		<text fill="white" font-family="sans-serif" text-anchor = "high" font-size="12" x="1200" y="143">14</text>
+		<line x1="1180" y1="140" x2="1160" y2="170" stroke="black" stroke-width="3"/>
+ 		<circle cx = "1160" cy="180" r ="20" stroke="black" stroke-width="1" fill="black"/>
+		<text fill="white" font-family="sans-serif" text-anchor = "high" font-size="12" x="1160" y="183">13</text>
+		<line x1="1220" y1="140" x2="1240" y2="170" stroke="black" stroke-width="3"/>
+ 		<circle cx = "1240" cy="180" r ="20" stroke="black" stroke-width="1" fill="black"/>
+		<text fill="white" font-family="sans-serif" text-anchor = "high" font-size="12" x="1240" y="183">15</text>
+		<line x1="1260" y1="180" x2="1260" y2="210" stroke="black" stroke-width="3"/>
+ 		<circle cx = "1260" cy="220" r ="20" stroke="black" stroke-width="1" fill="red"/>
+		<text fill="white" font-family="sans-serif" text-anchor = "high" font-size="12" x="1260" y="223">16</text>
+	</g>
+</svg>

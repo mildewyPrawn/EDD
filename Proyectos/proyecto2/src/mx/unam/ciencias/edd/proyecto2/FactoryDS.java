@@ -18,8 +18,8 @@ public class FactoryDS{
      * @param lista con los elementos de la estructura.
      */
     public FactoryDS(String ed, Lista<Integer> datos){
-	this.ed = ed;
-	this.datos = datos;
+        this.ed = ed;
+        this.datos = datos;
     }
 
     /**
@@ -28,46 +28,48 @@ public class FactoryDS{
      * estemos tratando.
      */
     public void fabrica(){
-	switch(ed){
-	case"Lista":
-	    FactoryLista fl = new FactoryLista(datos, s);
-	    fl.dibuja();
-	    break;
-	case "Pila":
-	    FactoryPila fp = new FactoryPila(datos, s);
-	    fp.dibuja();
-	    break;
-	case"Cola":
-	    FactoryCola fc = new FactoryCola(datos, s);
-	    fc.dibuja();
-	    break;
-	case "ArbolBinarioCompleto":
-	    FactoryArbolCompleto fac = new FactoryArbolCompleto(datos, s);
-	    fac.dibuja();
-	    break;
-	case "ArbolBinarioOrdenado":
-	    FactoryArbolOrdenado fao = new FactoryArbolOrdenado(datos, s);
-	    fao.dibuja();
-	    break;
-	case "ArbolRojinegro":
-	    FactoryRojinegro fr = new FactoryRojinegro(datos, s);
-	    fr.dibuja();
-	    break;
-	case "ArbolAVL":
-	    FactoryAVL favl = new FactoryAVL(datos, s);
-	    favl.dibuja();
-	    break;
-	case "MonticuloMinimo":
-	    FactoryMonticulo fm = new FactoryMonticulo(datos, s);
-	    fm.dibuja();
-	    break;
-	case "Grafica":
-	    System.out.println("Graficas por el momento no están disponibles.");
-	    System.exit(0);
-	    break;
-	default:
-	    System.exit(1);
-	    break;
-	}
+        switch(ed){
+        case"Lista":
+            FactoryLista fl = new FactoryLista(datos, s);
+            fl.dibuja();
+            break;
+        case "Pila":
+            FactoryPila fp = new FactoryPila(datos, s);
+            fp.dibuja();
+            break;
+        case"Cola":
+            FactoryCola fc = new FactoryCola(datos, s);
+            fc.dibuja();
+            break;
+        case "ArbolBinarioCompleto":
+            FactoryArbolCompleto fac = new FactoryArbolCompleto(datos, s);
+            fac.dibuja();
+            break;
+        case "ArbolBinarioOrdenado":
+            FactoryArbolOrdenado fao = new FactoryArbolOrdenado(datos, s);
+            fao.dibuja();
+            break;
+        case "ArbolRojinegro":
+            FactoryRojinegro fr = new FactoryRojinegro(datos, s);
+            fr.dibuja();
+            break;
+        case "ArbolAVL":
+            FactoryAVL favl = new FactoryAVL(datos, s);
+            favl.dibuja();
+            break;
+        case "MonticuloMinimo":
+            FactoryMonticulo fm = new FactoryMonticulo(datos, s);
+            fm.dibuja();
+            break;
+        case "Grafica":
+            FactoryGrafica fg = new FactoryGrafica(datos, s);
+            fg.dibuja();
+            //System.out.println("Graficas por el momento no están disponibles.");
+            //System.exit(0);
+            break;
+        default:
+            System.exit(1);
+            break;
+        }
     }
 }
